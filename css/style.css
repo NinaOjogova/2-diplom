@@ -12,7 +12,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 0 auto 0 auto;
     max-width: 1660px;
     width: 100%;
     font-family: opensans-bold, sans-serif;
@@ -585,14 +585,15 @@ header::before {
   /*--------------------FOOTER-------------------------*/
   .social-list {
     position: relative;
-    left: 244px;
-    right: 244px;
     margin-bottom: 70px;
+    left: 244px;
     width: 1172px;
-    padding: 30px 531px 34px 531px;
+    padding: 30px 0 34px 0;
     background-color: #f4f7f6;
     background-size: 1172px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
   }
   .social-icon {
