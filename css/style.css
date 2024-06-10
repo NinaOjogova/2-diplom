@@ -13,7 +13,7 @@
 
 body {
     margin: 0 auto 0 auto;
-    max-width: 1660px;
+    max-width: 100%;
     width: 100%;
     font-family: opensans-bold, sans-serif;
     text-align: center;
@@ -25,19 +25,18 @@ header::before {
     display: block;
     position: absolute;
     top: 0;
-    left: 0px;
-    bottom: 50px;
+    left: 0;
     right: 0;
-    width: 100vw;
-    height: 27.5vh;
+    bottom: 0;
+    width: 100%;
     background-color: #000;
     background-size: cover;
     opacity: 0.6;
-    padding: 0 120px 120px 0;
+    
     
   }
   header {
-    width: 100vw;
+    width: 100%;
     background-image: url("../image/banner-bg.jpg");
     background-repeat: no-repeat;
     background-position: left top;
@@ -46,6 +45,8 @@ header::before {
     position: relative;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     padding: 0 120px 120px 0;
   }
   .menu {
@@ -121,54 +122,61 @@ header::before {
   .wrp-posts {
     display: flex;
     align-items: end;
+    width: 100%;
     margin-top: 50px;
-  }
-  .post-one,
-  .post-two,
-  .post-three,
-  .post-four {
-    width: 25%;
     gap: 4px;
-    padding: 16px 18px;
+  }
+  .post-one::before and
+  .post-two::before and
+  .post-three::before and
+  .post-four::before {
+    content: '';
     background-color: #000000;
-    background-size: contain;
+    background-size: cover;
     opacity: 0.4;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .wrp-text {
     border: 3px solid #b59f5b;
     
   }
-  .post-one::after {
-    content: " ";
+  .post-one {
     background-image: url("../image/trend1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 570px 0;
     position: relative;
-    top: 570px;
     left: 0;
+    width: 25%;
+    padding: 16px 18px;
   }
-  .post-two::before {
-    content: " ";
+  .post-two {
     background-image: url("../image/trend2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 570px;
+    width: 25%;
+    padding: 16px 18px;
   }
-  .post-three::before {
-    content: " ";
+  .post-three {
     background-image: url("../image/trend3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 570px;
+    width: 25%;
+    padding: 16px 18px;
   }
-  .post-four::before {
-    content: " ";
+  .post-four {
     background-image: url("../image/trend4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 570px;
+    width: 25%;
+    padding: 16px 18px;
   }
   .wrap-post-text {
     display: inline-block;
@@ -200,6 +208,7 @@ header::before {
   /*================•MAIN•===============*/
 .main_aside-wrap {
     display: flex;
+    max-width: 0 auto 0 auto;
   }
   main {
     margin-top: 62px;
@@ -270,7 +279,7 @@ header::before {
     margin-top: 50px;
     line-height: 15px;
     letter-spacing: 0.05px;
-    padding-top: ;
+    padding-top: 0;
   }
   /*================•ASIDE•===============*/
   .sidebar {
@@ -630,4 +639,25 @@ header::before {
     color: #999999;
     margin-left: 13px;
     margin-bottom: 40px;
+  }
+  /*------------------------POPUP---------------*/
+  .popup {
+
+  }
+  .window {
+    font-family: opensans-bold, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    text-align: center;
+  }
+  .window::before {
+    content: '';
+    position: absolute;
+    top: 2659px;
+    left: 796px;
+    opacity: 0.400;
+    width: 66px;
+    height: 3px;
+    background-color: #b59f5b;
   }
