@@ -12,29 +12,19 @@
 }
 
 body {
-    margin: 0 auto 0 auto;
+  margin: 0;
     max-width: 100%;
-    width: 100%;
     font-family: opensans-bold, sans-serif;
     text-align: center;
 }
+.container {
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /*--------HEADER--------*/
 
-header::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #000;
-    background-size: cover;
-    opacity: 0.6;
-    
-    
-  }
   header {
     width: 100%;
     background-image: url("../image/banner-bg.jpg");
@@ -49,14 +39,28 @@ header::before {
     bottom: 0;
     padding: 0 120px 120px 0;
   }
+  header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    background-size: cover;
+    opacity: 0.6;
+    
+    
+  }
   .menu {
     content: "";
     display: flex;
     align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    left: 246px;
+    justify-content: space-evenly;
     top: 26px;
+    left: 56px;
     position: relative;
     z-index: 1;
     margin: 0 auto 0 auto;
@@ -96,10 +100,11 @@ header::before {
     display: block;
     text-align: center;
     top: 70px;
+    left: 36px;
     padding: 2px;
     position: relative;
     z-index: 1;
-    margin: 0 auto 0 auto;
+
   }
 
   /*--------------TRENDS------------*/
@@ -129,68 +134,53 @@ header::before {
     margin-top: 50px;
     gap: 4px;
   }
-  .post-one::before and
-  .post-two::before and
-  .post-three::before and
-  .post-four::before {
-    content: '';
-    background-color: #000000;
-    background-size: cover;
-    opacity: 0.4;
-    width: 25%;
-    min-height: 320px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .wrp-text {
-    border: 3px solid #b59f5b;
-    padding: 18px 18px 15px 18px;
-    text-align: bottom;
-
-    
-  }
-  .post-one {
-    background-image: url("../image/trend1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  .post-item {
     position: relative;
     left: 0;
     width: 25%;
     min-height: 320px;
     padding: 16px 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+  }
+  .post-item::after {
+    content: '';
+    background-color: #000000;
+    opacity: 0.4;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .post-one {
+    background-image: url("../image/trend1.jpg");
+   
   }
   .post-two {
     background-image: url("../image/trend2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 25%;
-    min-height: 320px;
-    padding: 16px 18px;
   }
   .post-three {
     background-image: url("../image/trend3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 25%;
-    min-height: 320px;
-    padding: 16px 18px;
   }
   .post-four {
     background-image: url("../image/trend4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 25%;
-    min-height: 320px;
-    padding: 16px 18px;
   }
-  .wrap-post-text {
-    display: inline-block;
-    align-items: end;
+  .wrp-text {
     border: 3px solid #b59f5b;
-    left: 18px;
+    padding: 18px 18px 15px 18px;
+    position: relative;
+    z-index: 2;
+    align-self: end;
+    text-align: left;
   }
   .list-post-teg {
     display: flex;
@@ -214,14 +204,13 @@ header::before {
   }
 
   /*================•MAIN•===============*/
-.main_aside-wrap {
+
+  .main_aside-wrap {
     display: flex;
-    justify-content: center;
-    margin: 0 auto 0 auto;
+    justify-content: space-around;
   }
   main {
     margin-top: 62px;
-    margin-left: 245px;
   }
   .article__wrap {
     display: flex;
@@ -546,8 +535,7 @@ header::before {
   }
   .one-good {
     text-align: center;
-    
-
+    width: 301px;
   }
   .wrp-good {
     width: 348px;
@@ -557,7 +545,7 @@ header::before {
     padding: 35px;
     position: relative;
     z-index: 1;
-
+    text-align: left;
   }
   .good-name {
     font-family: opensans-bold, sans-serif;
@@ -611,12 +599,11 @@ header::before {
   .social-wrap {
     display: flex;
     justify-content: center;
-    margin: 0 auto 0 auto;
+  
   }
   .social-list {
     position: relative;
     margin-bottom: 70px;
-    left: 100px;
     width: 1172px;
     padding: 30px 0 34px 0;
     background-color: #f4f7f6;
