@@ -17,6 +17,11 @@ body {
     font-family: opensans-bold, sans-serif;
     text-align: center;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
 .container {
   margin: 0 auto 0 auto;
   display: flex;
@@ -55,14 +60,15 @@ body {
     
   }
   .menu {
+    max-width: 1200px;
     content: "";
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    top: 26px;
-    left: 56px;
+    justify-content: space-between;
+    vertical-align: middle;
     position: relative;
     z-index: 1;
+    padding: 15px;
     margin: 0 auto 0 auto;
   }
   .menu__logo-link {
@@ -73,8 +79,6 @@ body {
   }
   .menu__list {
     display: flex;
-    float: right;
-    margin-left: 450px;
     margin-top: 13px;
   }
   .menu__item {
@@ -208,6 +212,7 @@ body {
   .main_aside-wrap {
     display: flex;
     justify-content: space-around;
+    margin: 0 auto 0 auto;
   }
   main {
     margin-top: 62px;
